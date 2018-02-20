@@ -1,0 +1,31 @@
+en:
+  title: Auctions
+
+  login: Login
+  logout: Logout
+  signup: Sign up
+  register: Register
+
+  make_a_choice: Make a choice
+  usertype: Usertype
+
+  submit: Submit
+
+  no_account: No account?
+  have_account: Have an account?
+
+nl:
+  title: Reclameveiling
+
+  login: Inloggen
+  logout: Uitloggen
+  signup: Aanmelden
+  register: Registreren
+
+  make_a_choice: Maak een keuze
+  usertype: Soort gebruiker
+
+  submit: Versturen
+
+  no_account: Geen account?
+  have_account: Al een account?

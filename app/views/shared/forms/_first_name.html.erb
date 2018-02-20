@@ -1,0 +1,11 @@
+<div class="form-field">
+  <%= f.label t('activerecord.attributes.user.first_name'), class: 'form-label', for: :first_name %>
+  <%= f.text_field :first_name,
+    autofocus: autofocus,
+    placeholder: t('activerecord.attributes.user.first_name_placeholder'),
+    id: :first_name,
+    required: true,
+    value: value,
+    autocomplete: :off
+  %>
+</div>

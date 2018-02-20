@@ -1,0 +1,82 @@
+/* Regular styling */
+
+input::placeholder, textarea::placeholder {
+  color: var(--grey);
+}
+
+label { font-size: var(--font-sm); }
+
+input:not([type="submit"]), select, textarea, select {
+  font-size: var(--font-sm);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline: 0;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--grey);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure its uniform with the rest of inputs */
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: var(--border-radius);;
+  background-color: var(--white);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  background-color: transparent;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Add validation style */
+
+select,
+input:not([type="submit"]) {
+  background-image: url('../svg/checkmark.svg');
+  background-repeat: no-repeat;
+  background-position: 8px 9px;
+  padding-left: 28px;
+}
+
+input:not([type="submit"]):focus,
+select:focus,
+textarea:focus {
+  border: 2px solid var(--primary);
+  background-image: url('../svg/checkmark_focus.svg');
+  outline: 0;
+  color: var(--primary);
+}
+
+select.touched:invalid,
+input:not([type="submit"]).touched:not(:focus):invalid {
+  border: 2px solid var(--danger);
+  background-image: url('../svg/checkmark_invalid.svg');
+}
+
+input.touched:not(:required):not([type="submit"]),
+select.touched:valid:required,
+input.touched:valid:not([type="submit"]):required {
+  border-color: var(--success);
+  background-image: url('../svg/checkmark_valid.svg');
+}
+
+select:valid,
+input:not(:placeholder-shown):not(:required):not([type="submit"]),
+input:not(:placeholder-shown):valid:not([type="submit"]):required {
+  border-color: var(--success);
+  background-image: url('../svg/checkmark_valid.svg');
+}

@@ -1,0 +1,19 @@
+<div class="form-field">
+  <%= f.label t('activerecord.attributes.user.last_name'), class: 'form-label', for: :last_name %>
+  <div class="form-input-grouped">
+    <%= f.text_field :infix,
+      placeholder: t('activerecord.attributes.user.infix_placeholder'),
+      value: value[:infix],
+      class: 'form-input-grouped-left'
+    %>
+
+    <%= f.text_field :last_name,
+      placeholder: t('activerecord.attributes.user.last_name_placeholder'),
+      class: 'form-input-grouped-right',
+      id: :last_name,
+      required: true,
+      value: value[:last_name],
+      autocomplete: :off
+    %>
+  </div>
+</div>

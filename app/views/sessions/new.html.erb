@@ -1,0 +1,23 @@
+<div class="flex-container">
+  <div class="form-container">
+    <div class="form-header">
+      <h3><%= t(:login) %></h3>
+    </div>
+
+    <% if flash[:error] %>
+      <div class="form-flash-error">
+        <%= flash[:error] %>
+      </div>
+    <% end %>
+
+    <%= form_with url: sessions_path, local: true, html: { class: "form" } do |f| %>
+      <%= render partial: 'shared/forms/email', locals: { f: f, value: email } %>
+      <%= render partial: 'shared/forms/password', locals: { f: f, value: email, id: :loginpassword } %>
+
+      <div class="form-split"></div>
+
+      <%= render partial: 'shared/forms/submit', locals: { f: f, text: t(:login) } %>
+      <%= render partial: 'shared/forms/alt_submit', locals: { alt_path: new_registration_path, text: t(:no_account) } %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+/* Rails turns button-tags into a-tags, so I mark a-tags with .link */
+
+a.link, a.link-inverted {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a.link:hover {
+  background-color: var(--primary);
+  color: var(--primary-inverted);
+}
+
+a.link-inverted:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+a.link-inverted:active {
+  background-color: var(--white);
+  color: var(--primary);
+}

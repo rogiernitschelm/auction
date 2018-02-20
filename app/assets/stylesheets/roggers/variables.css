@@ -1,0 +1,48 @@
+:root {
+  --primary: #5f6274;
+  --primary-dark: #2e303c;
+  --primary-inverted: #fff;
+  --primary-light: #f9f9fa;
+
+  --success: #23d160;
+  --success-dark: #1ba14a;
+  --success-inverted: #fff;
+
+  --info: #1e88e5;
+  --info-dark: #1565c0;
+  --info-inverted: #fff;
+
+  --warning: #ffd83d;
+  --warning-dark: #ffcc00;
+  --warning-inverted: #fff;
+
+  --danger: #C23D40;
+  --danger-dark: #ae3639;
+  --danger-inverted: #fff;
+
+  --white: #fff;
+  --grey: #bfbfbf;
+  --light-grey: #f3f3f3;
+  --dark-grey: #404040;
+  --black: #101010;
+
+  --font-family: 'Montserrat';
+  --font-color-main: var(--dark-grey);
+
+  --font-xs: 9px;
+  --font-sm: 11px;
+  --font-md: 12px;
+  --font-lg: 13px;
+  --font-xl: 14px;
+
+  --font-h1: 24px;
+  --font-h2: 16px;
+  --font-h3: 15px;
+  --font-h4: 14px;
+  --font-h5: 13px;
+
+  --navigation-height: 80px;
+  --footer-height: 80px;
+
+  --border-radius: 3px;
+}

@@ -1,0 +1,59 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+
+      auction:
+        one: Auction
+        other: Auctions
+
+    attributes:
+      user:
+        first_name: First name
+        first_name_placeholder: Andy
+
+        last_name: Last name
+        last_name_placeholder: Jackson
+
+        infix: Infix
+        infix_placeholder: "'o"
+
+        email: E-mail address
+        email_placeholder: 'hank@mail.com'
+
+        password: Password
+        password_confirmation: Password confirmation
+        password_placeholder: A safe password
+        password_confirmation_placeholder: Repeat your password
+
+nl:
+  activerecord:
+    models:
+      user:
+        one: Gebruiker
+        other: Gebruikers
+
+      auction:
+        one: Veiling
+        other: Veilingen
+
+    attributes:
+      user:
+        first_name: Voornaam
+        first_name_placeholder: Hendrik
+
+        last_name: Achternaam
+        last_name_placeholder: Boer
+
+        infix: Tussenvoegsel
+        infix_placeholder: de
+
+        email: E-mailadres
+        email_placeholder: 'karel@mail.com'
+
+        password: Wachtwoord
+        password_confirmation: Bevestiging wachtwoord
+        password_placeholder: Een veilig wachtwoord
+        password_confirmation_placeholder: Herhaal het wachtwoord
