@@ -1,5 +1,6 @@
 class RegistrationsController < ApplicationController
   skip_before_action :verify_authenticity_token
+
   before_action :redirect_users
   before_action :authorize_guest_actions
 
@@ -12,18 +13,13 @@ class RegistrationsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     rescue ActiveRecord::RecordInvalid => e
-      flash[:error] = e.message
-      flash[:form_values] = redirect_params(*e.record.errors.keys)
+      @errors = e.message
 
-      redirect_back fallback_location: new_registration_path
+      render 'shared/forms/_validation_errors', errors: @errors
     end
   end
 
   private
-
-  def redirect_params(excepted_keys)
-    create_params.except(*excepted_keys)
-  end
 
   def create_params
     params.permit(

@@ -14,6 +14,8 @@ en:
   no_account: No account?
   have_account: Have an account?
 
+  email_or_password_incorrect: 'E-mail or password incorrect.'
+
 nl:
   title: Reclameveiling
 
@@ -29,3 +31,5 @@ nl:
 
   no_account: Geen account?
   have_account: Al een account?
+
+  email_or_password_incorrect: 'E-mail of wachtwoord onjuist.'

@@ -15,10 +15,9 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     else
-      flash[:error] = 'E-mailadres of wachtwoord onjuist.'
-      flash[:form_values] = create_params
+      @errors = t(:email_or_password_incorrect)
 
-      redirect_back fallback_location: new_session_path
+      render 'shared/forms/_validation_errors', errors: @errors
     end
   end
 

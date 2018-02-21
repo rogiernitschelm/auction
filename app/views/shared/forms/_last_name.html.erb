@@ -3,7 +3,6 @@
   <div class="form-input-grouped">
     <%= f.text_field :infix,
       placeholder: t('activerecord.attributes.user.infix_placeholder'),
-      value: value[:infix],
       class: 'form-input-grouped-left'
     %>
 
@@ -12,7 +11,6 @@
       class: 'form-input-grouped-right',
       id: :last_name,
       required: true,
-      value: value[:last_name],
       autocomplete: :off
     %>
   </div>

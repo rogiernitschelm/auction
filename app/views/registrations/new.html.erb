@@ -4,23 +4,17 @@
       <h3><%= t(:register) %></h3>
     </div>
 
-    <% if flash[:error] %>
-      <div class="form-flash-error">
-        <%= flash[:error] %>
-      </div>
-    <% end %>
+    <%= form_with url: registrations_path, html: { class: "form" } do |f| %>
 
-    <%= form_with url: registrations_path, local: true, html: { class: "form" } do |f| %>
-
-      <%= render partial: 'shared/forms/first_name', locals: { f: f, autofocus: true, value: first_name } %>
-      <%= render partial: 'shared/forms/last_name', locals: { f: f, value: { infix: infix, last_name: last_name } } %>
-      <%= render partial: 'shared/forms/email', locals: { f: f, value: email, id: :email } %>
-      <%= render partial: 'shared/forms/usertype', locals: { f: f, value: usertype } %>
+      <%= render partial: 'shared/forms/first_name', locals: { f: f, autofocus: true } %>
+      <%= render partial: 'shared/forms/last_name', locals: { f: f } %>
+      <%= render partial: 'shared/forms/email', locals: { f: f, autofocus: false } %>
+      <%= render partial: 'shared/forms/usertype', locals: { f: f } %>
 
       <div class="form-split"></div>
 
-      <%= render partial: 'shared/forms/password', locals: { f: f, value: password, id: :password } %>
-      <%= render partial: 'shared/forms/password_confirmation', locals: { f: f, value: password_confirmation } %>
+      <%= render partial: 'shared/forms/password', locals: { f: f, id: :password } %>
+      <%= render partial: 'shared/forms/password_confirmation', locals: { f: f } %>
 
       <div class="form-split"></div>
 

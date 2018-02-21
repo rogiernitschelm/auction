@@ -1,0 +1,18 @@
+{
+  const currentError = document.querySelector('.form-flash-error');
+
+  if (currentError) {
+    currentError.remove();
+  }
+}
+
+{
+  const errorDiv = document.createElement('div');
+  const errorMessage = document.createTextNode("<%= @errors %>");
+  const formHeader = document.querySelector('.form-header');
+
+  errorDiv.className = 'form-flash-error';
+  errorDiv.appendChild(errorMessage);
+
+  formHeader.parentNode.insertBefore(errorDiv, formHeader.nextSibling);
+}

@@ -3,8 +3,7 @@
   <%= f.select(
       :usertype,
       options_for_select(
-        User.selectable_usertypes,
-        value
+        User.selectable_usertypes
       ),
       { prompt: t('make_a_choice') },
       {

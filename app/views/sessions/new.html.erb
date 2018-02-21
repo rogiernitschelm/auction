@@ -4,15 +4,9 @@
       <h3><%= t(:login) %></h3>
     </div>
 
-    <% if flash[:error] %>
-      <div class="form-flash-error">
-        <%= flash[:error] %>
-      </div>
-    <% end %>
-
-    <%= form_with url: sessions_path, local: true, html: { class: "form" } do |f| %>
-      <%= render partial: 'shared/forms/email', locals: { f: f, value: email } %>
-      <%= render partial: 'shared/forms/password', locals: { f: f, value: email, id: :loginpassword } %>
+    <%= form_with url: sessions_path, html: { class: "form" } do |f| %>
+      <%= render partial: 'shared/forms/email', locals: { f: f, autofocus: true } %>
+      <%= render partial: 'shared/forms/password', locals: { f: f, id: :loginpassword } %>
 
       <div class="form-split"></div>
 
