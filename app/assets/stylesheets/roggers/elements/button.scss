@@ -1,0 +1,84 @@
+.button {
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  outline: 0;
+  border-style: solid;
+  border-width: 1px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 4px;
+  font-size: var(--font-sm);
+  outline: 0;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease-in-out;
+
+  &.borderless {
+    border: 0;
+  }
+}
+
+.button-xs,
+.button-sm,
+.button-md,
+.button-lg,
+.button-xl,
+.button-primary,
+.button-primary-inverted { @extend .button; }
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--primary-inverted);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--primary-dark);
+  }
+}
+
+.button-primary-inverted {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--primary-inverted);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+.button-xs {
+  width: 88px;
+  height: 24px;
+  font-size: var(--font-xs);
+}
+
+.button-sm {
+  width: 100px;
+  height: 28px;
+  font-size: var(--font-sm);
+}
+
+.button-md {
+  width: 120px;
+  height: 36px;
+  font-size: var(--font-sm);
+}
+
+.button-lg {
+  width: 140px;
+  height: 42px;
+  font-size: var(--font-md);
+  border-width: 2px;
+}
+
+.button-xl {
+  width: 200px;
+  height: 48px;
+  font-size: var(--font-lg);
+  border-width: 2px;
+}

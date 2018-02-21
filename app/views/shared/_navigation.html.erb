@@ -1,0 +1,19 @@
+<nav class="navigation">
+  <div class="navigation-container">
+    <div class="navigation-group-left">
+      <h2 class="navigation-logo">Reclameveiling logo</h2>
+    </div>
+
+    <div class="navigation-group-center">
+    </div>
+
+    <div class="navigation-group-right">
+      <% if current_user.present? %>
+        <%= link_to t(:logout), session_path, method: 'delete', class: 'button-sm button-primary' %>
+      <% else %>
+        <%= link_to t(:login), new_session_path, method: 'get', class: 'button-sm button-primary' %>
+        <%= link_to t(:signup), new_registration_path, method: 'get', class: 'button-sm button-primary-inverted' %>
+      <% end %>
+    </div>
+  </div>
+</nav>

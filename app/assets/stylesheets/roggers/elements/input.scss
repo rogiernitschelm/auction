@@ -1,0 +1,70 @@
+input:not([type="submit"]),
+select,
+textarea {
+  font-size: var(--font-sm);
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  outline: 0;
+  height: 36px;
+  padding: 0 14px;
+
+  border-radius: var(--border-radius);
+  border: 2px solid var(--grey);
+
+  transition: all 0.3s ease-in-out;
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    background-color: transparent;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  &.with-validity-icon {
+    background-image: url('../svg/checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: 8px 9px;
+    padding-left: 28px;
+
+    &:focus {
+      border: 2px solid var(--primary);
+      background-image: url('../svg/checkmark_focus.svg');
+      outline: 0;
+      color: var(--primary);
+    }
+
+    &.touched {
+      &:invalid:not(:focus) {
+        border-color: var(--danger);
+        background-image: url('../svg/checkmark_invalid.svg');
+      }
+
+      &:not(:required) {
+        border-color: var(--success);
+        background-image: url('../svg/checkmark_valid.svg');
+      }
+
+      &:valid:required {
+        border-color: var(--success);
+        background-image: url('../svg/checkmark_valid.svg');
+      }
+    }
+
+    &:valid:only-of-type(select),
+    &:not(:placeholder-shown):not(:required),
+    &:not(:placeholder-shown):required:valid {
+      border-color: var(--success);
+      background-image: url('../svg/checkmark_valid.svg');
+    }
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: var(--border-radius);;
+  background-color: var(--white);
+}

@@ -1,0 +1,87 @@
+.form-container {
+  max-width: 350px;
+  margin-top: 40px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Otherwise some forms get squished to ugliness */
+  flex-grow: 1;
+  flex-shrink: 100;
+  flex-basis: 100%;
+
+  font-size: var(--font-sm);
+
+  .form {
+    margin: 20px 0;
+
+    /* Override the default button margin */
+
+    &.button {
+      margin: 0px;
+    }
+  }
+
+  .form-header {
+    height: 70px;
+    border-radius: var(--border-radius) 3px 0 0;
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-transform: uppercase;
+
+    h3 {
+      color: var(--primary-inverted);
+    }
+  }
+
+  .form-field {
+    display: grid;
+    grid-template-columns: 5% [label] 38% [field] 52% 5%;
+    margin: 14px 0;
+
+    .button {
+      grid-column: field;
+    }
+
+    .form-label {
+      grid-column: label;
+      display: flex;
+      align-items: center;
+    }
+
+    .form-input-grouped {
+      grid-column: field;
+      display: grid;
+      grid-template-columns: [left-input] 33% 2% [right-input] 65%;
+    }
+
+    .form-input-grouped-left {
+      grid-column: left-input;
+    }
+
+    .form-input-grouped-right {
+      grid-column: right-input;
+    }
+
+    .form-split {
+      margin: 12px 20px;
+      height: 1px;
+      background-color: var(--light-grey);
+    }
+  }
+
+  .form-flash-error {
+    font-size: var(--font-md);
+    padding: 10px;
+    color: var(--white);
+    margin: 18px;
+    margin-bottom: 24px;
+    text-align: center;
+    background-color: var(--danger);
+  }
+  
+  @media screen and (min-width: 600px) {
+    max-width: 400px;
+  }
+}

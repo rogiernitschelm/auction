@@ -1,0 +1,12 @@
+<div class="form-field">
+  <%= f.label t('activerecord.attributes.user.email'), class: 'form-label', for: :email %>
+
+  <%= f.text_field :email,
+    placeholder: t('activerecord.attributes.user.email_placeholder'),
+    id: :email,
+    required: true,
+    type: :text,
+    autocomplete: :off,
+    class: 'with-validity-icon'
+  %>
+</div>

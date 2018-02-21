@@ -1,0 +1,16 @@
+<div class="form-field">
+  <%= f.label t(:usertype), class: 'form-label', for: :usertype %>
+  <%= f.select(
+      :usertype,
+      options_for_select(
+        selectable_usertypes
+      ),
+      { prompt: t('make_a_choice') },
+      {
+        id: :usertype,
+        required: true,
+        class: 'with-validity-icon'
+      }
+    )
+  %>
+</div>
